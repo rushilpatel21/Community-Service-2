@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
 }
 
-header, footer {
+header {
     background-color: #35495e;
     color: #ffffff;
     text-align: center;
@@ -40,16 +40,34 @@ main {
     padding: 2rem;
 }
 
-main p, main h2 {
+footer {
+    background-color: #35495e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main p {
     font-size: 1.2rem;
+    text-align: center;
+}
+
+.center-text {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
 .homepage-text {
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .about-text, .services-text, .events-text, .contact-text {
@@ -84,8 +102,39 @@ main p, main h2 {
     }
 }
 
-.center-text, .centered-list {
+.image-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-column {
+    flex: 1;
+    max-width: 45%;
     text-align: center;
+}
+
+.text-column {
+    flex: 2;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-column,
+    .text-column {
+        max-width: 100%;
+    }
+}
+
+.centered-list {
+    text-align: center;
+    list-style-position: inside;
 }
 
 .small-image {
@@ -95,31 +144,7 @@ main p, main h2 {
     margin: 20px auto;
 }
 
-.image-container, .image-text-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.horizontal-image {
-    max-width: 45%;
-    height: auto;
-}
-
-.vertical-image {
-    max-height: 300px;
-    width: auto;
-    margin-left: 20px;
-}
-
-@media (max-width: 768px) {
-    .image-text-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-column, .text-column {
-        max-width: 100%;
-    }
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
 }
